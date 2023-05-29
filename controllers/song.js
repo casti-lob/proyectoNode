@@ -22,7 +22,7 @@ async function getSongs(req,res){
 async function getSong(req, res){
     const id = req.params.id
     const song = await Song.find({_id: id})
-    if(!song.length){
+    if(song.length){
         res.json(song);
     }else{
         res.status(404).json(`No se ha encontrado la cancion con el id ${id}`)
@@ -52,17 +52,16 @@ async function delSong(req, res){
 }
 
 async function putSong(req, res){
-    const newSong= req.body
-    const song = req.song
-    const idSong = song._id
-    const checkSong = await Song.find({_id: idSong})
+    const id = req.params.id
+    const song = await Song.find({_id:id})
+    const newSong = req.body
     
     
-    if(checkSong.length){
-        await Song.updateOne({_id: idSong},newSong)
+    if(song.length){
+        await Song.updateOne({_id: id},newSong)
         res.json(newSong)
     }else{
-        res.status(400).send(`No existe la cancion con id ${idSong}`)
+        res.status(400).send(`No existe la cancion con id ${id}`)
     }
 }
 

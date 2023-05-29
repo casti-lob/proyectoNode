@@ -1,0 +1,121 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "proyect",
+    "dateExported": "2023-05-29T17:22:13.590Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "46691641-5806-40d1-a4d4-a3ea720e87ce",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-05-26T15:39:14.353Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "songs",
+            "containerId": "",
+            "created": "2023-05-26T16:40:31.214Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "69f80e8c-91e4-4afa-9aad-4dcd16e94076",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "46691641-5806-40d1-a4d4-a3ea720e87ce",
+            "name": "getUsers",
+            "url": "",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-26T15:39:25.604Z",
+            "modified": "2023-05-26T15:39:25.604Z",
+            "headers": []
+        },
+        {
+            "_id": "e82d482a-6178-46df-9ee5-270f6270c887",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "getSongs",
+            "url": "http://localhost:8080/songs",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-26T16:40:40.791Z",
+            "modified": "2023-05-26T16:41:42.043Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "88bed01d-fd82-41c5-b8a5-07fe79f3f6dd",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "getSong",
+            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b9s",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-05-29T17:17:30.767Z",
+            "modified": "2023-05-29T17:20:02.864Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ccbbed7f-7d7b-4dde-bcf0-858fe88dd2be",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "deleteSong",
+            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b9",
+            "method": "DELETE",
+            "sortNum": 27500,
+            "created": "2023-05-29T17:21:05.029Z",
+            "modified": "2023-05-29T17:21:37.344Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "397b73ec-6b6d-4815-8b94-fdbb4b6e5b74",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "postSongs",
+            "url": "http://localhost:8080/songs",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-29T16:53:24.880Z",
+            "modified": "2023-05-29T16:56:11.501Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nueva\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3a511376-1443-472c-b138-712bdbebb68f",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "name": "putSongs",
+            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-05-29T16:56:52.769Z",
+            "modified": "2023-05-29T17:16:57.040Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nuevo\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8080/"
+        }
+    }
+}
