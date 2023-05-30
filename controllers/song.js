@@ -65,6 +65,7 @@ async function putSong(req, res){
     }
 }
 
-
+/*Arreglo no pasarle ele id del mongo y a la hora de actualizar
+ver si es el mismo */
 
 module.exports={getSongs, postSong, getSong, delSong, putSong}

@@ -9,6 +9,10 @@ router.post('/',postSong);
 router.put('/:id',[
     check('id','No existe la canción').isMongoId(),
 ],putSong)
-router.get('/:id',getSong)
-router.delete('/:id',delSong)
+router.get('/:id',[
+    check('id','No existe la canción').isMongoId()
+],getSong)
+router.delete('/:id',[
+    check('id','No existe la canción').isMongoId()
+],delSong)
 module.exports=router

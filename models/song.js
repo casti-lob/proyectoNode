@@ -16,7 +16,7 @@ const UserSchema = Schema({
         
     },
     duration: {
-        type: String,
+        type: Number,
         required: true,
        
     }
