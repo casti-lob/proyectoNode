@@ -43,29 +43,44 @@ async function postSong(req, res){
 async function delSong(req, res){
     const idSong = req.params.id    
     const song = await Song.find({_id: idSong})
-    if(song.length){
-        await Song.deleteOne({_id:idSong})
-        res.json(song)
+    const userLog = req.userLogin
+    if(userLog.rol =='ADMIN'){
+        if(song.length){
+            await Song.deleteOne({_id:idSong})
+            res.json(song)
+        }else{
+            res.status(400).send(`No existe la cancion con id${idSong}`)
+        }
     }else{
-        res.status(400).send(`No existe la cancion con id${idSong}`)
+        res.status(400).send(`El usuario debe de ser ADMIN`)
     }
+    
 }
 
 async function putSong(req, res){
     const id = req.params.id
     const song = await Song.find({_id:id})
+  
+   
     const newSong = req.body
-    
-    
-    if(song.length){
-        await Song.updateOne({_id: id},newSong)
-        res.json(newSong)
+    const name = newSong.name;
+    const isDuplicateSong = await Song.findOne({name})
+    const userLog = req.userLogin
+    if(userLog.rol =='ADMIN'){
+        if(isDuplicateSong!=null){
+            res.status(400).send(`Ya existe una cancion con el nombre ${name}`)
+        }else if(song.length){
+            await Song.updateOne({_id: id},newSong)
+            res.json(newSong)
+        }else{
+            res.status(400).send(`No existe la cancion con id ${id}`)
+        }
     }else{
-        res.status(400).send(`No existe la cancion con id ${id}`)
+        res.status(400).send(`El usuario debe de ser ADMIN`)
     }
+    
 }
 
-/*Arreglo no pasarle ele id del mongo y a la hora de actualizar
-ver si es el mismo */
+
 
 module.exports={getSongs, postSong, getSong, delSong, putSong}
