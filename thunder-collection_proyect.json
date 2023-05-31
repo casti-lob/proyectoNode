@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "proyect",
-    "dateExported": "2023-05-29T17:22:13.590Z",
+    "dateExported": "2023-05-31T16:06:19.923Z",
     "version": "1.1",
     "folders": [
         {
@@ -17,78 +17,246 @@
             "containerId": "",
             "created": "2023-05-26T16:40:31.214Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "bad",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "created": "2023-05-31T09:09:19.392Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
+            "name": "good",
+            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "created": "2023-05-31T09:09:26.228Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
+            "name": "good",
+            "containerId": "46691641-5806-40d1-a4d4-a3ea720e87ce",
+            "created": "2023-05-31T10:27:33.181Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "bad",
+            "containerId": "46691641-5806-40d1-a4d4-a3ea720e87ce",
+            "created": "2023-05-31T10:27:38.505Z",
+            "sortNum": 60000
         }
     ],
     "requests": [
         {
-            "_id": "69f80e8c-91e4-4afa-9aad-4dcd16e94076",
-            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "46691641-5806-40d1-a4d4-a3ea720e87ce",
-            "name": "getUsers",
-            "url": "",
-            "method": "GET",
-            "sortNum": 10000,
-            "created": "2023-05-26T15:39:25.604Z",
-            "modified": "2023-05-26T15:39:25.604Z",
-            "headers": []
-        },
-        {
             "_id": "e82d482a-6178-46df-9ee5-270f6270c887",
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "getSongs",
             "url": "http://localhost:8080/songs",
             "method": "GET",
-            "sortNum": 20000,
+            "sortNum": 10000,
             "created": "2023-05-26T16:40:40.791Z",
-            "modified": "2023-05-26T16:41:42.043Z",
+            "modified": "2023-05-31T09:09:28.993Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9fc73956-00bd-48cd-bef1-4fef93cafd96",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "getSongBad",
+            "url": "http://localhost:8080/songs/6",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-31T09:10:03.849Z",
+            "modified": "2023-05-31T09:10:24.411Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c32b6f34-26d5-4f26-aead-c9c860734806",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "postUserEmpty",
+            "url": "http://localhost:8080/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-31T10:41:23.637Z",
+            "modified": "2023-05-31T10:41:48.795Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n}",
+                "form": []
+            },
             "tests": []
         },
         {
             "_id": "88bed01d-fd82-41c5-b8a5-07fe79f3f6dd",
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "getSong",
-            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b9s",
+            "url": "http://localhost:8080/songs/64770d6d98c54e931153455d",
             "method": "GET",
-            "sortNum": 25000,
+            "sortNum": 20000,
             "created": "2023-05-29T17:17:30.767Z",
-            "modified": "2023-05-29T17:20:02.864Z",
+            "modified": "2023-05-31T09:09:57.681Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7a5c4c57-576b-4dd6-8a64-d61a552f6338",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "postSongsRepetido",
+            "url": "http://localhost:8080/songs",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-31T09:19:55.612Z",
+            "modified": "2023-05-31T09:19:57.957Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nueva\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\": 12\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "072bbc89-a2fd-4385-a85d-5d22853fdc30",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "postUserDuplicate",
+            "url": "http://localhost:8080/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-31T10:42:18.097Z",
+            "modified": "2023-05-31T10:42:47.644Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"prueba\",\n  \"email\":\"nuevo@hotmail.es\",\n  \"password\":\"123\",\n  \"rol\":\"ADMIN\"\n}",
+                "form": []
+            },
             "tests": []
         },
         {
             "_id": "ccbbed7f-7d7b-4dde-bcf0-858fe88dd2be",
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "deleteSong",
-            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b9",
+            "url": "http://localhost:8080/songs/64770d6d98c54e931153455d",
             "method": "DELETE",
-            "sortNum": 27500,
+            "sortNum": 30000,
             "created": "2023-05-29T17:21:05.029Z",
-            "modified": "2023-05-29T17:21:37.344Z",
+            "modified": "2023-05-31T15:57:37.756Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3MjQxZWQ1ZDk0NzlmOWRlNWEzODgiLCJpYXQiOjE2ODU1NDY5NzQsImV4cCI6MTY4NTU2MTM3NH0.nhExfo4fQ3OQhBBxZcBtn15yQoO9rsWTKI0RtOZoQ_M"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5659db16-8d38-431b-93d1-24bb1488b671",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "postSongsEmpty",
+            "url": "http://localhost:8080/songs",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-31T09:20:47.079Z",
+            "modified": "2023-05-31T09:20:49.772Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "41ac722d-0ff9-44e7-b4f1-052fbcfeba32",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "postUserMalEmail",
+            "url": "http://localhost:8080/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-31T10:42:57.862Z",
+            "modified": "2023-05-31T10:43:23.157Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nuevo\",\n  \"email\":\"nuev@hotmail\",\n  \"password\":\"123\",\n  \"rol\":\"ADMIN\"\n}",
+                "form": []
+            },
             "tests": []
         },
         {
             "_id": "397b73ec-6b6d-4815-8b94-fdbb4b6e5b74",
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "postSongs",
             "url": "http://localhost:8080/songs",
             "method": "POST",
-            "sortNum": 30000,
+            "sortNum": 40000,
             "created": "2023-05-29T16:53:24.880Z",
-            "modified": "2023-05-29T16:56:11.501Z",
+            "modified": "2023-05-31T09:57:38.100Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"nueva\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "raw": "{\n  \"name\":\"nuevo\",\n  \"launchDate\":\"02/02/1990\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\": 0.5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "23d210e5-2383-49ae-8ea8-933e421ce96d",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "postSongsFechaMal",
+            "url": "http://localhost:8080/songs",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-31T09:32:10.475Z",
+            "modified": "2023-05-31T09:32:37.590Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nueva\",\n  \"launchDate\":\"02/80/1990\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\": 12\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3a59dbae-1f14-486b-bca6-998c0ae6e071",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "postUserMalRol",
+            "url": "http://localhost:8080/users",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-31T10:43:29.957Z",
+            "modified": "2023-05-31T10:43:49.999Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nuevo\",\n  \"email\":\"nuevo@hotmail.es\",\n  \"password\":\"123\",\n  \"rol\":\"ADMI\"\n}",
                 "form": []
             },
             "tests": []
@@ -96,18 +264,208 @@
         {
             "_id": "3a511376-1443-472c-b138-712bdbebb68f",
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
-            "containerId": "73d46daf-40c7-48a8-9e54-f2b755c8c14f",
+            "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "putSongs",
-            "url": "http://localhost:8080/songs/6474d92b6fea6227d33f14b",
+            "url": "http://localhost:8080/songs/64770d6d98c54e931153455d",
             "method": "PUT",
-            "sortNum": 40000,
+            "sortNum": 50000,
             "created": "2023-05-29T16:56:52.769Z",
-            "modified": "2023-05-29T17:16:57.040Z",
+            "modified": "2023-05-31T09:54:57.860Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"nuevo\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "raw": "{\n  \"name\":\"nuev\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "43703f5c-7811-4708-b5c0-658f7e7090f7",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "postSongsDuracionMal",
+            "url": "http://localhost:8080/songs",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-31T09:34:04.971Z",
+            "modified": "2023-05-31T09:34:27.347Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nueva\",\n  \"launchDate\":\"02/02/1990\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\": 0\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce557996-178f-41f1-9a98-26b42396cec8",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
+            "name": "postUser",
+            "url": "http://localhost:8080/users",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-31T10:27:49.589Z",
+            "modified": "2023-05-31T15:36:20.021Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"user\",\n  \"email\":\"user@hotmail.es\",\n  \"password\":\"123\",\n  \"rol\":\"USER\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "70a8a6c1-a748-4f66-9e94-d3d4bf27fa3c",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "loginEmpty",
+            "url": "http://localhost:8080/users/login",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-05-31T11:02:37.409Z",
+            "modified": "2023-05-31T11:03:04.110Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "65882cb8-b26a-4f4f-bdae-999e675c6a29",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "deleteSongMalId",
+            "url": "http://localhost:8080/songs/6",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-05-31T09:36:24.652Z",
+            "modified": "2023-05-31T09:36:42.523Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c4c8a22d-ef2d-4249-ad32-6de6e71deeae",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
+            "name": "login",
+            "url": "http://localhost:8080/users/login",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-31T11:01:02.267Z",
+            "modified": "2023-05-31T11:02:33.902Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\": \"123\",\n  \"email\":\"prueba@hotmail.es\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e059d7c5-6bdd-42a2-a1fc-4c1bfa4f1699",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "loginBadEmal",
+            "url": "http://localhost:8080/users/login",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-31T11:03:09.648Z",
+            "modified": "2023-05-31T11:03:46.654Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\": \"12\",\n  \"email\":\"prueba@hotmail.es\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "df53d0f9-774c-4672-b28b-c277450156cf",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "416097a6-f889-4e9e-9512-e8cd13164283",
+            "name": "putSongsNombreDuplicate",
+            "url": "http://localhost:8080/songs/64770d6d98c54e931153455d",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-05-31T09:57:45.434Z",
+            "modified": "2023-05-31T09:59:15.663Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"prueba\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "22e9e587-6230-4376-825f-4555449be288",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "24ab27fe-1074-4ec3-bb5d-5ac955f58b2a",
+            "name": "loginInactive",
+            "url": "http://localhost:8080/users/login",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-31T11:04:04.727Z",
+            "modified": "2023-05-31T11:04:19.405Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\": \"123\",\n  \"email\":\"prueba@hotmail.es\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "39428104-50de-46e3-8017-12e409dbc1e5",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
+            "name": "deleteUser",
+            "url": "http://localhost:8080/users/6477241ed5d9479f9de5a388",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-05-31T15:27:11.054Z",
+            "modified": "2023-05-31T15:35:16.269Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3MjQxZWQ1ZDk0NzlmOWRlNWEzODgiLCJpYXQiOjE2ODU1NDY5NzQsImV4cCI6MTY4NTU2MTM3NH0.nhExfo4fQ3OQhBBxZcBtn15yQoO9rsWTKI0RtOZoQ_M"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fd6a3720-ed7a-42d9-a882-2b3323e11f62",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
+            "name": "putUser",
+            "url": "http://localhost:8080/users/6477241ed5d9479f9de5a388",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-05-31T15:46:03.178Z",
+            "modified": "2023-05-31T15:50:21.425Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3MjQxZWQ1ZDk0NzlmOWRlNWEzODgiLCJpYXQiOjE2ODU1NDY5NzQsImV4cCI6MTY4NTU2MTM3NH0.nhExfo4fQ3OQhBBxZcBtn15yQoO9rsWTKI0RtOZoQ_M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"mod\",\n  \"email\":\"prueba@hotail.es\",\n  \"password\":\"123\",\n  \"rol\":\"USER\",\n  \"state\":true\n}",
                 "form": []
             },
             "tests": []
