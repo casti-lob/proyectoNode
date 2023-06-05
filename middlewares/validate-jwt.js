@@ -19,7 +19,8 @@ const validateJWT = async (req= request, res=response, next) => {
         
         next();
     }catch(error){
-    console.log(error)
+     console.log(error)
+     req.status(401).json({msg:'Token expirado'})
 
     }
 }

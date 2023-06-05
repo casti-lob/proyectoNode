@@ -11,7 +11,7 @@ async function postUser(req, res){
     
     if(emailDuplicate){
         return res.status(400).json({mensage: 'Ya existe un usuario con ese email'})
-
+        
     }
 
     const salt = bcryptjs.genSaltSync();
