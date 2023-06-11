@@ -60,14 +60,14 @@ async function delSong(req, res){
 async function putSong(req, res){
     const id = req.params.id
     const song = await Song.find({_id:id})
-  
+    
    
     const newSong = req.body
     const name = newSong.name;
     const isDuplicateSong = await Song.findOne({name})
     const userLog = req.userLogin
     if(userLog.rol =='ADMIN'){
-        if(isDuplicateSong!=null){
+        if(isDuplicateSong!=null&& song[0].name != name){
             res.status(400).send(`Ya existe una cancion con el nombre ${name}`)
         }else if(song.length){
             await Song.updateOne({_id: id},newSong)

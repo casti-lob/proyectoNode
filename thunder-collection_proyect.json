@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "proyect",
-    "dateExported": "2023-05-31T16:06:19.923Z",
+    "dateExported": "2023-06-11T18:45:45.056Z",
     "version": "1.1",
     "folders": [
         {
@@ -45,6 +45,13 @@
             "containerId": "46691641-5806-40d1-a4d4-a3ea720e87ce",
             "created": "2023-05-31T10:27:38.505Z",
             "sortNum": 60000
+        },
+        {
+            "_id": "4f76bf08-607b-4db8-8e14-7ecd27a8ddb5",
+            "name": "playlist",
+            "containerId": "",
+            "created": "2023-06-09T10:23:52.846Z",
+            "sortNum": 70000
         }
     ],
     "requests": [
@@ -266,16 +273,21 @@
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
             "containerId": "cb291418-df0f-49f8-9b05-cdc9e2f023a2",
             "name": "putSongs",
-            "url": "http://localhost:8080/songs/64770d6d98c54e931153455d",
+            "url": "http://localhost:8080/songs/64771580a67774225849c6ba",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2023-05-29T16:56:52.769Z",
-            "modified": "2023-05-31T09:54:57.860Z",
-            "headers": [],
+            "modified": "2023-06-09T09:33:10.113Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3MjQxZWQ1ZDk0NzlmOWRlNWEzODgiLCJpYXQiOjE2ODYzMDI3MDksImV4cCI6MTY4NjMxNzEwOX0.4QT2VQdGd9Elt05rzyQdDyH00e31c9MJjVp7Jj7mSm0"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"nuev\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdalkfdask\",\n  \"duration\":\"12\"\n}",
+                "raw": "{\n  \"name\":\"prueba\",\n  \"launchDate\":\"01/02/1999\",\n  \"description\":\"dfsalkfdal\",\n  \"duration\":\"12\"\n}",
                 "form": []
             },
             "tests": []
@@ -360,12 +372,12 @@
             "method": "GET",
             "sortNum": 60000,
             "created": "2023-05-31T11:01:02.267Z",
-            "modified": "2023-05-31T11:02:33.902Z",
+            "modified": "2023-06-09T15:42:04.249Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"password\": \"123\",\n  \"email\":\"prueba@hotmail.es\"\n}",
+                "raw": "{\n  \"password\": \"123\",\n  \"email\":\"pr@hotail.es\"\n}",
                 "form": []
             },
             "tests": []
@@ -451,23 +463,90 @@
             "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
             "containerId": "ac245b6f-15d6-4633-90df-8711fd7c0f69",
             "name": "putUser",
-            "url": "http://localhost:8080/users/6477241ed5d9479f9de5a388",
+            "url": "http://localhost:8080/users/647d9f04f7c816f6fb445d5d",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-05-31T15:46:03.178Z",
-            "modified": "2023-05-31T15:50:21.425Z",
+            "modified": "2023-06-09T15:53:06.502Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDc3MjQxZWQ1ZDk0NzlmOWRlNWEzODgiLCJpYXQiOjE2ODU1NDY5NzQsImV4cCI6MTY4NTU2MTM3NH0.nhExfo4fQ3OQhBBxZcBtn15yQoO9rsWTKI0RtOZoQ_M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDdkOWYwNGY3YzgxNmY2ZmI0NDVkNWQiLCJpYXQiOjE2ODYzMjU5NTMsImV4cCI6MTY4NjM0MDM1M30.0Q4m2kuwiZ_U73G7lejZtQJ5mh5fEAlEaHivPERdn7s"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"mod\",\n  \"email\":\"prueba@hotail.es\",\n  \"password\":\"123\",\n  \"rol\":\"USER\",\n  \"state\":true\n}",
+                "raw": "{\n  \"name\": \"modificado\",\n  \"email\":\"pr@hotail.es\",\n  \"password\":\"123\",\n  \"rol\":\"ADMIN\",\n  \"state\":true\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "9ebd7da7-7b3d-40ec-ba04-345bea762a0a",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "4f76bf08-607b-4db8-8e14-7ecd27a8ddb5",
+            "name": "postPlaylist",
+            "url": "http://localhost:8080/playlist",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-06-09T10:24:05.153Z",
+            "modified": "2023-06-09T10:37:27.831Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDdkOWYwNGY3YzgxNmY2ZmI0NDVkNWQiLCJpYXQiOjE2ODYzMDQyNjUsImV4cCI6MTY4NjMxODY2NX0.d6e2kH-7-JJUvrQiN_QxtGgVf2pHIrOd1Z4Hb8E_9wU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"prub\",\n  \"img\":\"prueba\",\n  \"song\":{\n     \"_id\": \"64771580a67774225849c6b\"\n    \n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6a1ba25-c890-4da9-aeb3-b3554ddda98d",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "4f76bf08-607b-4db8-8e14-7ecd27a8ddb5",
+            "name": "addSongPlaylist ",
+            "url": "http://localhost:8080/playlist/6483008b4f92f327b401b001",
+            "method": "PUT",
+            "sortNum": 95000,
+            "created": "2023-06-09T16:26:51.372Z",
+            "modified": "2023-06-09T16:50:07.075Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDdkOWYwNGY3YzgxNmY2ZmI0NDVkNWQiLCJpYXQiOjE2ODYzMjU5NTMsImV4cCI6MTY4NjM0MDM1M30.0Q4m2kuwiZ_U73G7lejZtQJ5mh5fEAlEaHivPERdn7s"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n     \"_id\": \"64771a0eedf8e5222c6e4237\"\n    \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5cbe6315-1c1a-4977-ac56-213917d935aa",
+            "colId": "83ad9fdf-40a5-442f-8357-9d084869ccd0",
+            "containerId": "4f76bf08-607b-4db8-8e14-7ecd27a8ddb5",
+            "name": "getPlaylist",
+            "url": "http://localhost:8080/playlist",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-06-09T15:42:55.144Z",
+            "modified": "2023-06-09T15:43:34.143Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDdkOWYwNGY3YzgxNmY2ZmI0NDVkNWQiLCJpYXQiOjE2ODYzMjUzNjEsImV4cCI6MTY4NjMzOTc2MX0.UiwJjn86iM-R5kf6Uhc9T_kCyboMLz6gzjcRG66Qg58"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ],

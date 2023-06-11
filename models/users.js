@@ -23,9 +23,18 @@ const UserSchema = Schema({
     state:{
         type: Boolean,
         default:true
+    },
+    playlist:{
+        type:Schema.Types.ObjectId,
+        ref: 'playlist',
+        required: false
     }
 })
 
+UserSchema.methods.toJSON = function() {
+    const { __v, estado, ...data  } = this.toObject();
+    return data;
+}
 
 
 module.exports = model('User',UserSchema);

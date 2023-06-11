@@ -4,7 +4,7 @@ const {check} = require('express-validator')
 const {validarCampos} = require('../middlewares/validate-fields');
 const{validateJWT}= require('../middlewares/validate-jwt')
 
-const{postUser, login, deleteUser} = require('../controllers/user');
+const{postUser, login, deleteUser, putUser} = require('../controllers/user');
 
 router.post('/',[
     check('name','El nombre es requerido').not().isEmpty(),
@@ -27,5 +27,11 @@ router.delete('/:id',[
     check('id','No existe el usuario').isMongoId(),
     validarCampos
 ],deleteUser)
+
+router.put('/:id',[
+    validateJWT,
+    check('id','No existe el usuario').isMongoId(),
+    validarCampos
+], putUser)
 
 module.exports= router
