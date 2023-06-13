@@ -11,10 +11,12 @@ const PlaylistSchema = Schema({
         
         
     },
-    song:{
+    songs:[
         type:Schema.Types.ObjectId,
         ref: 'songs',
         required: false
+    ]
+       
     },
     user:{
         type:Schema.Types.ObjectId,

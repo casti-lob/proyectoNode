@@ -10,8 +10,8 @@ router.post('/',[
     validateJWT,
     check('name','El nombre es requerido').not().isEmpty(),
     check('img','La imagen es requerida').not().isEmpty(),
-    check('songs','No existe la canción').isMongoId(),
-    check('user','No existe el usuario').isMongoId(),
+    
+    
     validarCampos
 ], postPlaylist)
 
