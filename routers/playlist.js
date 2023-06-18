@@ -4,12 +4,12 @@ const {check} = require('express-validator')
 const {validarCampos} = require('../middlewares/validate-fields');
 const{validateJWT}= require('../middlewares/validate-jwt')
 
-const{postPlaylist, getPlaylist, putPlaylist} = require('../controllers/playlist')
+const{postPlaylist, getPlaylist,putImg} = require('../controllers/playlist')
 
 router.post('/',[
     validateJWT,
     check('name','El nombre es requerido').not().isEmpty(),
-    check('img','La imagen es requerida').not().isEmpty(),
+   
     
     
     validarCampos
@@ -20,9 +20,9 @@ router.get('/',[
 
 ], getPlaylist)
 
-router.put('/:id',[
-    validateJWT,
 
-], putPlaylist)
-
+router.put('/img/:id',[
+    check('id', 'La play list no existe').isMongoId(),
+    validateJWT
+], putImg)
 module.exports=router
